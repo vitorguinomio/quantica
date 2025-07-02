@@ -174,6 +174,56 @@ Colaboração e Forks: **Trabalhe em projetos open-source com forks e contribui�
 
 
 
+### VIM 
+#### Conceitos Fundamentais
+
+Modos do VIM: normal, inserção, visual e comando.
+
+Entrar e sair: vim arquivo.txt, :w, :q, :wq, :q!
+
+Movimentação básica: h (esquerda), j (baixo), k (cima), l (direita)
+
+2. Edição de Texto
+
+Inserir texto: i, I, a, A, o, O
+
+Deletar: x, dd, d$, d0, dG
+
+Copiar e colar: yy, p, P, :registers
+
+Desfazer/refazer: u, Ctrl + r
+
+3. Busca e Substituição
+
+Buscar: /texto, n, N
+
+Substituir: :s/texto1/texto2/g, :%s/texto1/texto2/gc
+
+4. Trabalho com Múltiplos Arquivos e Buffers
+
+Abrir múltiplos arquivos: vim arquivo1 arquivo2
+
+Alternar entre buffers: :bn, :bp, :ls, :b#
+
+Divisões de tela: :split, :vsplit, Ctrl+w para navegar
+
+5. Plugins e Configuração Avançada
+
+.vimrc: Arquivo de configuração do VIM
+
+Gerenciador de plugins: vim-plug
+
+Plugins populares: NERDTree, vim-airline, fzf.vim, coc.nvim
+
+6. Macetes e Produtividade
+
+Macros: q[a-z], comandos, q, executar: @[a-z]
+
+Atalhos personalizados no .vimrc
+
+Explorar comandos como :help, :set number, :set paste
+
+
 
 
 
