@@ -7,9 +7,13 @@ Aqui vai ficar salvo todos cursos e materias e passo a passo para se torna um de
 ### (Pratica em pyhton)
 *** Cursos para ver o conteudo: https://www.youtube.com/watch?v=OERbOJZwGAU&list=PLViOsriojeLrdw5VByn96gphHFxqH3O_N ***
 
-Imagens: **Aprenda a criar imagens com Dockerfile e entender como funcionam as camadas.**
+~~Imagens: **Aprenda a criar imagens com Dockerfile e entender como funcionam as camadas.**~~
+https://www.youtube.com/watch?v=X2hpxp3Kq6A
+https://www.youtube.com/watch?v=yhyc3-Namto
 
-Containers: **Entenda como instanciar, gerenciar e interagir com containers.**
+
+~~Containers: **Entenda como instanciar, gerenciar e interagir com containers.**~~
+https://www.youtube.com/watch?v=X2hpxp3Kq6A
 
 Volumes: **Use volumes para persistir dados entre execuções de containers.**
 
