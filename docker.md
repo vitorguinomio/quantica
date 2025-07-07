@@ -20,7 +20,7 @@ Ele usar de namespacing e control group para poder separa por total o ambiente e
 
 ## Imagen
 
-E um arquivo que salva tudo que e necessario para um acao ou execucao como camadas de codigo , bibliotecas necessarias, dependencias e ate arquivos de execucao.
+E um arquivo que salva tudo que e necessario para um acao e codigo funcionar ou execucao como camadas de codigo , bibliotecas necessarias, dependencias e ate arquivos de execucao.
 Uma imagen nao roda por si so e tambem nao consegue ser alterada somente a transformando num container para poder modifica-la ou poder dar run nela.
 Em si ela serva como uma print do que e necesseario ter no ambiente para ele poder rodar e assim com base nesse blueprint o container ser criado e tudo necessario para o ambiente funcionar.
 Processo que transforma uma imagen em um container "Ficara em uma pequena sessao do disco rigido que o kernel ira isolar"
