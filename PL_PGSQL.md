@@ -3,40 +3,40 @@ linguagem nativa do postgresql
 
 ## Como criar uma funcao
  
-    CREATE FUNCTION nome_da_funcao (parametros_que_vai_usar) RETURNS integer'o que funcao vai retorna'
-    AS 'Corpo fauncao ou seja todo seu codigo'
+CREATE FUNCTION nome_da_funcao (parametros_que_vai_usar) RETURNS integer'o que funcao vai retorna 'AS 'Corpo fauncao ou seja todo seu codigo'
+    
     $$
-        DECLARE 
+        DECLARE --todas as variasveis que vao ser utilizadas
             TIPOS DE VARIAVEIS
                 user_id interger; 'Sempre vai ser composto pelo nome da varial e tipo da variavel'
                 preco numeric;
 
-    Tipo ROWTYPE (copia uma tabela):
+Tipo ROWTYPE (copia uma tabela):
 
-                minhalinha nometabela%ROWTYPE; 'vai copiar os mesmo tipo de variaveis de acordo com a tabela indicada antes da % '
+    minhalinha nometabela%ROWTYPE; 'vai copiar os mesmo tipo de variaveis de acordo com a tabela indicada antes da % '
 
-                | id     | Nome 'VARCHAR(55)'           | idade 'numeric'|     
-                |--------|------------------------------|----------------|
-                | 1      | Vitor sousa cardoso          | 22             |
-                | 2      | Marluce de sousa santos      | 18             |
-                | 3      | Cleiton jose                 | 17             |
+    | id     | Nome 'VARCHAR(55)'           | idade 'numeric'|     
+    |--------|------------------------------|----------------|
+    | 1      | Vitor sousa cardoso          | 22             |
+    | 2      | Marluce de sousa santos      | 18             |
+    | 3      | Cleiton jose                 | 17             |
+    | id     | Nome 'VARCHAR(55)'           | idade 'numeric'|
+    |--------|------------------------------|----------------|
+    | 1      |                              |                |
+    | 2      |                              |                |
+    | 3      |                              |                |
 
-                | id     | Nome 'VARCHAR(55)'           | idade 'numeric'|
-                |--------|------------------------------|----------------|
-                | 1      |                              |                |
-                | 2      |                              |                |
-                | 3      |                              |                |
-
-    Tipo coluna type (Copia uma coluna):
+ Tipo coluna type (Copia uma coluna):
 
                 meucampo nometabela.nomecoluna%TYPE  'Copia espefico e copia somente de apenas da coluna que eu declarei'
 
-                k CONSTANT integer := 10; 'declarei uma constante inteira no meu k'
+Constant variavel constante:
 
-        --todas as variasveis que vao ser utilizadas
-        BEGIN
+    k CONSTANT integer := 10; 'declarei uma constante inteira no meu k'
 
-        --inicio da implementacao dos codigos 
+    BEGIN --inicio da implementacao dos codigos 
+
+        
 
         END; 
     $$LANGUAGE plpgsql; --> indentifica a linguagem usada para funcao
