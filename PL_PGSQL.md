@@ -11,6 +11,8 @@ linguagem nativa do postgresql
                 user_id interger; 'Sempre vai ser composto pelo nome da varial e tipo da variavel'
                 preco numeric;
 
+    Tipo ROWTYPE (copia uma tabela):
+
                 minhalinha nometabela%ROWTYPE; 'vai copiar os mesmo tipo de variaveis de acordo com a tabela indicada antes da % '
 
                 | id     | Nome 'VARCHAR(55)'           | idade 'numeric'|     
@@ -24,6 +26,8 @@ linguagem nativa do postgresql
                 | 1      |                              |                |
                 | 2      |                              |                |
                 | 3      |                              |                |
+
+    Tipo coluna type (Copia uma coluna):
 
                 meucampo nometabela.nomecoluna%TYPE  'Copia espefico e copia somente de apenas da coluna que eu declarei'
 
