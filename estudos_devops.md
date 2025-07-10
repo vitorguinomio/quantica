@@ -227,6 +227,17 @@ Atalhos personalizados no .vimrc
 
 Explorar comandos como :help, :set number, :set paste
 
+## 📅 Roteiro de Estudo Semanal para PL/pgSQL
+
+| Semana | Conteúdo                     | Objetivo                                               |
+|--------|------------------------------|--------------------------------------------------------|
+| 1      | Sintaxe e funções básicas    | Criar funções simples com `RETURN`, `IF`, e variáveis  |
+| 2      | Loops, cursores e exceções   | Controlar fluxo com `LOOP`, `WHILE`, `EXCEPTION`       |
+| 3      | Gatilhos e procedures        | Automatizar ações com `TRIGGER` e `PROCEDURE`          |
+| 4      | Integração com Python        | Usar `psycopg2` ou `SQLAlchemy` para chamar funções    |
+
+
+
 
 
 

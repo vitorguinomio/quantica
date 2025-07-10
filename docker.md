@@ -27,20 +27,50 @@ Processo que transforma uma imagen em um container "Ficara em uma pequena sessao
 
 ## Volumes 
 
-Usam rprivate propagação de ligação (privada recursiva), e a propagação de ligação não é configurável para volumes. 
+Volumes no Docker: conceito e vantagens
 
-São dados persistentes de um  contêiners, criados e gerenciados pelo docker. e armezado no Host do docker e semelhante das montagens de vinculação, exceto volumes que são direcianados.
-O porque usar principalmente por cause de dados importantes durante os teste. As montagens binds dependam da estrutura de diretórios e do sistema operacional da máquina host, os volumes são totalmente gerenciados pelo Docker. Volumes são uma boa opção para os seguintes casos de uso:
+Volumes usam propagação de ligação privada recursiva (rprivate), e a propagação de ligação não é configurável para volumes. Eles são usados para armazenar dados persistentes de contêineres, sendo criados e gerenciados diretamente pelo Docker, armazenados no host. São semelhantes às montagens por vínculo (bind mounts), porém os volumes são mais abstratos e portáveis, sendo independentes da estrutura de diretórios do sistema operacional.
 
-    É mais fácil fazer backup ou migrar volumes do que vincular montagens.
-    Você pode gerenciar volumes usando comandos da CLI do Docker ou a API do Docker.
-    Os volumes funcionam em contêineres Linux e Windows.
-    Os volumes podem ser compartilhados com mais segurança entre vários contêineres.
-    Novos volumes podem ter seu conteúdo pré-preenchido por um contêiner ou compilação.
-    Quando sua aplicação requer E/S de alto desempenho.
+Por que usar volumes?
+Volumes são especialmente úteis para armazenar dados importantes durante os testes ou em ambientes de produção. Enquanto as montagens por vínculo dependem da estrutura e do sistema de arquivos do host, os volumes são totalmente gerenciados pelo Docker, oferecendo maior flexibilidade.
 
-Não e uma boa opção para acessar os arquivos pois e gerenciados pelo proprior docker montagens de vinculação e melhor opção para acessor os arquivos host.
-Mais efeciente e ele usar o drive do kernel linux para armazenamento e principalmente união dos arquivos. Essa abstração extra e reduz o desempenho em coparação a uso de volume, que gravam diretamente no host.
-Se não gerar arquivos persistenes faz tmpfs são dados virtuais na memoria ram boa opção para seu container gerar dados. 
+Vantagens de usar volumes:
 
-Mesmo com o container destruidor , com persistencia volume os dados não são perdidos mais sua camada de transação sim.
+É mais fácil fazer backup ou migração de volumes do que de montagens por vínculo.
+
+Você pode gerenciar volumes pela CLI do Docker ou pela API do Docker.
+
+Funcionam tanto em contêineres Linux quanto Windows.
+
+Permitem compartilhamento seguro entre múltiplos contêineres.
+
+Podem ter seu conteúdo pré-preenchido por um contêiner ou durante a build da imagem.
+
+Oferecem melhor desempenho de E/S (entrada/saída) em comparação com outras opções.
+
+Bind mounts vs Volumes
+Embora os volumes sejam mais eficientes para persistência e portabilidade, montagens por vínculo (bind mounts) são melhores quando é necessário acesso direto aos arquivos do host, por exemplo, durante o desenvolvimento. No entanto, essas montagens dependem da estrutura de diretórios do host e podem gerar problemas de portabilidade.
+
+Volumes são considerados mais eficientes porque usam drivers do kernel Linux para armazenamento, e permitem a união de camadas de arquivos, reduzindo abstrações e melhorando o desempenho em comparação a bind mounts.
+
+Outros tipos de armazenamento
+Se o contêiner não precisa armazenar dados de forma persistente, pode-se usar tmpfs — que armazena os dados apenas em memória RAM. Essa é uma boa opção para gerar dados temporários e voláteis, já que são descartados quando o contêiner é finalizado.
+
+Vale lembrar que, mesmo que um contêiner seja destruído, dados armazenados em volumes persistem, mas as camadas de transação do contêiner são perdidas.
+
+Tipos de volumes:
+Volumes nomeados:
+
+Gerenciados automaticamente pelo Docker.
+
+São independentes da estrutura do sistema de arquivos do host.
+
+Exemplo: docker volume create meu-volume.
+
+Bind mounts (montagens por vínculo):
+
+Dependem da estrutura do sistema operacional.
+
+Permitem acesso direto aos arquivos do host.
+
+Exemplo: docker run -v /caminho/host:/caminho/container.
