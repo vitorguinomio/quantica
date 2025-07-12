@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=yhyc3-Namto
 ~~Containers: **Entenda como instanciar, gerenciar e interagir com containers.**~~
 https://www.youtube.com/watch?v=X2hpxp3Kq6A
 
-Volumes: **Use volumes para persistir dados entre execuções de containers.**
+~~Volumes: **Use volumes para persistir dados entre execuções de containers.**~~
 
 Networks: **Crie redes Docker para comunicação entre containers com diferentes drivers (bridge, host...).**
 

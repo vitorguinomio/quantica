@@ -2,7 +2,8 @@
 linguagem nativa do postgresql
 
 ## Como criar uma funcao
- 
+
+### Declarano as var
 CREATE FUNCTION nome_da_funcao (parametros_que_vai_usar) RETURNS integer'o que funcao vai retorna 'AS 'Corpo fauncao ou seja todo seu codigo'
     
     $$
@@ -34,11 +35,23 @@ Constant variavel constante:
 
     k CONSTANT integer := 10; 'declarei uma constante inteira no meu k'
 
-    BEGIN --inicio da implementacao dos codigos 
+### Declarando os parametros
 
+BEGIN --inicio da implementacao dos codigos 
+'Dita toda acao que vai ser feita com os parametros e variaveis Tendo return na sua sintaxe para aponta de todo o processor ao que dever retorna'
+
+
+    CREATE FUNCTION aplicaTaxa (valor1 real, valor2 real) -- posso colocar o o type dos parametros
+    RETURNS real AS 
+    $$
+    BEGIN
+               (1 + 2 ) -- E Posso colocar o valor dos parametros direto na Function
+        RETURN (valor1 + valor2) * 0.06; -- script feita para dar return
+    END;
+    $$ LANGUAGE plpgsql;
         
 
-        END; 
+        END; --> Finaliza a function 
     $$LANGUAGE plpgsql; --> indentifica a linguagem usada para funcao
 
 
