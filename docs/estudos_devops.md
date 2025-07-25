@@ -144,9 +144,9 @@ Logs e onde encontra-los.
 
 ### Github
 *** https://www.youtube.com/watch?v=DqTITcMq68k ***
-git init, clone, add, commit, status, log: **Comandos base para versionar e acompanhar alterações no código.**
+~~git init, clone, add, commit, status, log: **Comandos base para versionar e acompanhar alterações no código.**~~
 
-git push/pull e remote origin: **Envie e receba código entre seu repositório local e o GitHub.**
+~~git push/pull e remote origin: **Envie e receba código entre seu repositório local e o GitHub.**~~
 
 git branch e merge: **Gerencie múltiplas versões do código com branches e fusões.**
 
